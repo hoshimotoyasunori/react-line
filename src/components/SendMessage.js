@@ -8,12 +8,13 @@ function SendMessage() {
     const [message , setMessage] = useState();
     function sendMessage(e){
         e.preventDefault();
-        const {uid, photoURL} = auth.currentUser;
+        const {uid, photoURL,displayName} = auth.currentUser;
 
         db.collection("messages").add({
             text:message,
             photoURL,
             uid,
+            displayName,
             created_at:firebase.firestore.FieldValue.serverTimestamp(),
         });
         setMessage("");

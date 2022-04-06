@@ -11,12 +11,13 @@ function SignIn() {
   }
   return (
     <>
-      <div className='header'></div>
-      <div className='main'>
-        <Button onClick={signInWithGoogle}>
-          Googleでログイン
-        </Button>
-      </div>
+      <div className='header login' >
+        <h3>Team Chat</h3>
+          <Button onClick={signInWithGoogle}>
+            Googleでログイン
+          </Button>
+        </div>
+      <div className='main'></div>
     </>
     
   )

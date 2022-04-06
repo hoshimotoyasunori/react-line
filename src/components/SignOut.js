@@ -4,11 +4,11 @@ import { auth } from '../firebase.js';
 
 function SignOut() {
   return (
-    <div className='header'>
-      <Button style={{color:"white",fontsize:"15px" }} onClick={() => auth.signOut()}>
+    <div className='header login'>
+      <h3>{auth.currentUser.displayName}</h3>
+      <Button onClick={() => auth.signOut()}>
           サインアウト
       </Button>
-      <h3>{auth.currentUser.displayName}</h3>
     </div>
   )
 }
